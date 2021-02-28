@@ -61,12 +61,6 @@
 // Lösung aus dem Video
 const haushaltsbuch = {
     eintraege:[],
-    // neuer_eintrag: {
-    //     titel: null,
-    //     typ: null,
-    //     betrag: null,
-    //     datum: null
-    // },
     gesamtbilanz: {
         bilanz_einnahmen: 0,
         bilanz_ausgaben: 0,
@@ -76,10 +70,14 @@ const haushaltsbuch = {
 // eintraege array  objekt  
 
     eintrag_erfassen () {
-        this.neuer_eintrag.titel = prompt("Titel: ", "Einkaufen");
-        this.neuer_eintrag.typ = prompt("Typ: ", "Einnahme oder Ausgabe");
-        this.neuer_eintrag.betrag = parseInt(prompt("Betrag: ", "in Cent"));
-        this.neuer_eintrag.datum = prompt("Datum: ", "jjjj-mm-tt");
+        this.eintraege.push(
+            {
+                titel: prompt("Titel: ", "Einkaufen"),
+                typ: prompt("Typ: ", "Einnahme oder Ausgabe"),
+                betrag: parseInt(prompt("Betrag:", "in Cent")),
+                datum: prompt("Datum: ", "jjjj-mm-tt")
+            }
+        );
     },
     // eintrag_ausgeben () {
     //     console.log(`
@@ -119,5 +117,8 @@ const haushaltsbuch = {
     }
 };
 haushaltsbuch.eintrag_hinzufügen();
+console.log(haushaltsbuch.eintraege);
 haushaltsbuch.eintrag_hinzufügen();
+console.log(haushaltsbuch.eintraege);
 haushaltsbuch.eintrag_hinzufügen();
+console.log(haushaltsbuch.eintraege);
