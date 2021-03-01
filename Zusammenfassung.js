@@ -1,0 +1,107 @@
+"use strict"
+
+// Funktionen
+const log_it = function() {
+    console.log("Funktionen sind voll super!");
+};
+const multiplizieren = function (a, b) {
+    return a * b;
+};
+
+// Objekte
+let konto = {
+    iban: "DE6254642112384741312",
+    bic: "WEASE5PXNX",
+    inhaber: {
+        vorname: "Max",
+        nachname: "Mustermann",
+        geschlecht: "männlich",
+        alter: 25
+    },
+    kontostand: 3500,
+    aktiv: true,
+    einzahlen(e) {                  // Methode
+        this.kontostand += e;  
+    },
+    auszahlen(a) {
+        this.kontostand -= a;
+    }
+};
+
+// Array
+let produkte = [
+    "Bananen", 
+    "Äpfel", 
+    "Schokolade", 
+    "Brot", 
+    "Müsli"
+];
+
+let waren = [
+    [
+        "Äpfel",
+        "Birnen",
+        "Bananen"
+    ],
+    [
+        "Möhren",
+        "Sellerie",
+        "Kohl"
+    ],
+    [
+        "Graubrot",
+        "Schwarzbrot",
+        "Vollkornbrot"
+    ]
+];
+let autos_array = [
+    {
+        marke: "Audi",
+        modell: "A3",
+        farbe: "rot"
+    },
+    {
+        marke: "Hyundai",
+        modell: "i30 N",
+        farbe: "blau"
+    },
+    {
+        marke: "Ford",
+        modell: "Fiesta ST",
+        farbe: "Schwarz"
+    }   
+];
+
+// Schleifen
+let x = 0; // <-- Zählvariable
+
+while (x < 5) {
+    x++; // oder: x += 1 
+    console.log(`While: ${x}`);  
+}
+
+for (let i = 0; i < 5; i++){
+    if (i == 3) {
+        continue;
+    } else if (i == 4) {
+        break;
+    }
+    console.log(i);
+}
+for ( let i = 0; i < personen.length; i++) {
+    console.log(`Hallo ${personen[i]}!`);
+    console.log(i);
+}
+        // Callback
+let funktion_2 = function(f) {              // callback
+    f();
+    console.log("Ich bin Funktion 2!");  
+};
+funktion_2(function() {
+console.log("Ich bin Funktion 1!");
+});
+// forEach 
+zahlen.forEach(function (e, i, ) {
+    console.log(e);
+    console.log(`${e} in Index ${i}`);
+});
