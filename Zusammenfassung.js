@@ -133,3 +133,32 @@ let zahlen_neu = zahlen.sort(function (a, b) {
     return a - b;  // oder b - a rückwärts
 });
 console.log(zahlen_neu);
+eintraege_sortieren () {
+    this.eintraege.sort(function (a, b) {
+        if (a.datum > b.datum) {
+            return -1;
+        } else if (a.datum < b.datum) {
+            return 1;
+        } else {
+            return 0;
+        }
+    });
+},
+// Map
+let mein_map = new Map();
+mein_map.forEach(function (wert, eigenschaft) {
+        console.log(wert);
+        console.log(eigenschaft);
+    });
+for (let [eigenschaft, wert] of mein_map) {
+    console.log(eigenschaft);
+    console.log(wert);
+}
+// Sets
+let mein_set = new Set();
+mein_set.forEach(function (wert, NULL) {
+    console.log(wert);
+});
+for (let wert of mein_set) {
+    console.log(wert);
+}
