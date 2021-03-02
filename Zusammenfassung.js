@@ -7,7 +7,6 @@ const log_it = function() {
 const multiplizieren = function (a, b) {
     return a * b;
 };
-
 // Objekte
 let konto = {
     iban: "DE6254642112384741312",
@@ -27,7 +26,6 @@ let konto = {
         this.kontostand -= a;
     }
 };
-
 // Array
 let produkte = [
     "Bananen", 
@@ -36,7 +34,6 @@ let produkte = [
     "Brot", 
     "Müsli"
 ];
-
 let waren = [
     [
         "Äpfel",
@@ -71,15 +68,12 @@ let autos_array = [
         farbe: "Schwarz"
     }   
 ];
-
 // Schleifen
 let x = 0; // <-- Zählvariable
-
 while (x < 5) {
     x++; // oder: x += 1 
     console.log(`While: ${x}`);  
 }
-
 for (let i = 0; i < 5; i++){
     if (i == 3) {
         continue;
@@ -105,3 +99,37 @@ zahlen.forEach(function (e, i, ) {
     console.log(e);
     console.log(`${e} in Index ${i}`);
 });
+// for in
+for (let e in mein_array) {         // gibt die Eigenschaft aus (hier Index)
+    console.log(e);
+}
+// for of
+for (let e of mein_array) {         // for off nur bei Array, map?,set?
+    console.log(e);
+}
+let paare = Object.entries(mein_objekt);        // entries gibt array zurück
+let eigenschaft = Object.keys(mein_objekt);     // keys für eigenschaften
+let werte = Object.values(mein_objekt);         // values gibt werte des Objekt zurück+
+        //Kurzschreibweise
+Object.values(mein_objekt).forEach(function(e) {
+    console.log(e);
+});
+for (let e of Object.values(mein_objekt)) {
+    console.log(e);
+}
+// array filtern
+let kleinergleich20 = zahlen.filter(function (e) {  // filter
+    if (e <= 20) {
+        return true;
+    }
+// array sortieren
+        // bsp für strings
+let worte = ["Zahl", "Wahnsinn", "Mangel", "Abspann"];
+let neu_sortiert_worte = worte.sort();
+console.log(neu_sortiert_worte);
+        // bsp numbers
+let zahlen = [1, 20, 2000, 1000000, 50];
+let zahlen_neu = zahlen.sort(function (a, b) {
+    return a - b;  // oder b - a rückwärts
+});
+console.log(zahlen_neu);
