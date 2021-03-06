@@ -51,3 +51,5 @@ let d_unix = new Date();
 d_unix.setTime(1614889640000);
 console.log(d_unix);
 console.log(d_unix.getTime());
+let da = new Date();
+console.log(da.getMonth());
