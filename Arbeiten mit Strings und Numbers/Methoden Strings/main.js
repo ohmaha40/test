@@ -11,3 +11,8 @@ console.log(s.toLocaleLowerCase());     // schreibt alles klein
 console.log(s.toLocaleUpperCase());     // schreibt alles groß
 console.log(s.trim());                  // entfernt unnötige leerzeichen
 console.log(s.repeat(100));             // wiederholen
+
+
+let a = 'eloquent';
+console.log(a.length);
+console.log(a.substring(1,a.length -1));
